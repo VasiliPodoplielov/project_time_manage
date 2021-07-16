@@ -1,1 +1,1 @@
-;export {LayoutContainer as Layout} from './LayoutContainer'
+export { LayoutContainer as Layout } from './LayoutContainer';

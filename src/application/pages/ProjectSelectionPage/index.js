@@ -1,1 +1,1 @@
-export {ProjectsSelectionPageContainer as ProjectSelectionPage} from './ProjectsSelectionPageContainer'
+export { ProjectsSelectionPageContainer as ProjectSelectionPage } from './ProjectsSelectionPageContainer';

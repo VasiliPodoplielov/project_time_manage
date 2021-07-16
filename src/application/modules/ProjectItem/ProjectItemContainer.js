@@ -1,8 +1,6 @@
 import React from 'react';
-import ProjectItemComponent from "./ProjectItemComponent";
+import ProjectItemComponent from './ProjectItemComponent';
 
-export const ProjectItemContainer = () => {
-  return (
-    <ProjectItemComponent />
-  );
-};
+export const ProjectItemContainer = () => (
+  <ProjectItemComponent />
+);

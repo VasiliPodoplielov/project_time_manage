@@ -1,7 +1,7 @@
-import React from "react";
-import {ROUTES} from "./routes";
-import {Layout} from "./application/layouts/Layout";
-import {BrowserRouter} from "react-router-dom";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { ROUTES } from './routes';
+import { Layout } from './application/layouts/Layout';
 
 function App() {
   return (
