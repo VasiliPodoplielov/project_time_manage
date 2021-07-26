@@ -1,6 +1,7 @@
 {
   "extends": "airbnb",
   "plugins": ["react"],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -17,6 +18,11 @@
         "extensions": [".js", ".jsx"]
       }
     ],
+    "jsx-a11y/label-has-associated-control": ["error", {
+      "required": {
+        "some": ["nesting", "id"]
+      }
+    }],
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
     "react/jsx-props-no-spreading": "off"
