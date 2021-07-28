@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import CreateProjectComponent from './CreateProjectComponent';
 import { useForm } from '../../../packages/hooks/useForm/useForm';
+import { createProject } from './actions';
 
 const initialState = {
   title: {
@@ -11,11 +13,16 @@ const initialState = {
   },
 };
 
-export const CreateProjectContainer = () => {
-  const { form, onChange } = useForm(initialState);
+const CreateProjectContainerInner = (props) => {
+  const { form, onChange, resetForm } = useForm(initialState);
 
   const onSubmit = () => {
-    console.log(form);
+    props.createProject({
+      title: form.controls.title.value,
+      description: form.controls.description.value,
+    });
+
+    resetForm();
   };
 
   return (
@@ -26,3 +33,11 @@ export const CreateProjectContainer = () => {
     />
   );
 };
+
+const mapDispatchToProps = {
+  createProject,
+};
+
+export const CreateProjectContainer = connect(
+  null, mapDispatchToProps,
+)(CreateProjectContainerInner);

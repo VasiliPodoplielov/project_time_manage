@@ -4,11 +4,9 @@ import { useState } from 'react';
  * example
  * const initial = [
  *  inputName: {
- *    name: 'inputName',
  *    value: 'inputValue',
  *  },
  *  inputName1: {
- *    name: 'inputName1',
  *    value: 'inputValue2',
  *  },
  * ];
@@ -48,5 +46,9 @@ export const useForm = (initialFormData) => {
     });
   };
 
-  return { form, onChange };
+  const resetForm = () => {
+    setForm(initialState);
+  };
+
+  return { form, onChange, resetForm };
 };

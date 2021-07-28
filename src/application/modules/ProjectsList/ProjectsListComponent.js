@@ -1,12 +1,16 @@
 import React from 'react';
 import { ProjectItem } from '../ProjectItem';
 import classes from './ProjectsList.module.css';
+import { generateId } from '../../../packages/utils/generateId';
 
-const ProjectsListComponent = () => (
+const ProjectsListComponent = ({ projects }) => (
   <div className={classes.wrapper}>
-    <ProjectItem />
-    <ProjectItem />
-    <ProjectItem />
+    {projects.map((project) => (
+      <ProjectItem
+        key={generateId('project')}
+        project={project}
+      />
+    ))}
   </div>
 );
 

@@ -1,1 +1,1 @@
-export { ProjectItemContainer as ProjectItem } from './ProjectItemContainer';
+export { ProjectItemComponent as ProjectItem } from './ProjectItemComponent';
